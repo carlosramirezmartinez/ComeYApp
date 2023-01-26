@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto Reg";
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+body {
+    background: rgb(226, 223, 223);
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to right, rgba(47, 23, 182, 0.6), rgba(74, 116, 206, 0.6), rgba(130, 177, 196, 0.6)), url("./assets/img/fondo.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*Todas las barras*/
+
+nav {
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    /*z-index 2 para sobreponer otros elementos bootstrap como carrusel*/
+}
+
+
+/*Barra de inicio - contenido externo*/
+
+.tetv {
+    background: rgba(255, 255, 255, 0);
+    height: 80px;
+    /*Tamaño barra arriba-abajo*/
+    color: rgb(255, 255, 255);
+}
+
+.tetv2 {
+    background: rgba(170, 170, 170);
+    height: 80px;
+    color: #000;
+}
+
+
+/*Contenido principal de la barra*/
+
+.contenedor-nav {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    height: inherit;
+    overflow: hidden;
+}
+
+
+/*Contenido del menu de la barra*/
+
+nav .enlaces a {
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    color: inherit;
+}
+
+nav .enlaces a:hover {
+    border-top: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    transition: 0.8s;
+}
+
+
+/*Logo barra a la izquierda*/
+
+.logo,
+.logo img {
+    height: 75px;
+}
+
+
+/* son las 3 barras pero las usaremos para el responsive*/
+
+.icono {
+    display: none;
+    font-size: 20px;
+    padding: 23.5px 20px;
+}
+
+
+/*Portada*/
+
+.textos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+.textos>h1 {
+    font-size: 80px;
+    ;
+}
+
+.textos>h2 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+
+/* Principal */
+
+.contenedor {
+    margin: auto;
+    padding: 60px;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.contenedor h3 {
+    font-size: 33px;
+    color: rgb(41, 33, 110);
+    margin-bottom: 10px;
+}
+
+.contenedor p {
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+}
+
+
+/* Recetas */
+
+.botones-work {
+    overflow: hidden;
+}
+
+.botones-work li {
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 45px;
+    padding: 6px 12px;
+    border: 1px solid rgba(74, 116, 206, 0.6);
+    list-style: none;
+    color: rgba(74, 116, 206, 0.6);
+}
+
+.botones-work li:hover {
+    background: rgba(74, 116, 206, 0.6);
+    color: #fff;
+    cursor: pointer;
+}
+
+.botones-work .active {
+    background: rgba(74, 116, 206, 0.6);
+    color: #fff;
+}
+
+.galeria-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.curso {
+    width: 31%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 45px;
+    margin: auto;
+}
+
+
+/*Tarjeta interior*/
+
+.img-work {
+    height: 80%;
+    width: 100%;
+}
+
+.img-work img {
+    height: 100%;
+    width: 100%;
+}
+
+.textos-work {
+    width: 100%;
+    height: 10%;
+}
+
+.textos-work h4 {
+    line-height: 30px;
+    font-weight: 30px;
+}
+
+
+/* Interes */
+
+
+/* barra que pongo debajo del texto, after es una pseudoclase*/
+
+.barra::after {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    /*Tamaño izq-derecha de la barra*/
+    height: 3px;
+    /*Tamaño de la barra*/
+    background: rgba(8, 0, 119, 0.6);
+    margin-bottom: 30px;
+    /*margen entre nuestra barra y el texto de abajo*/
+}
+
+.interes {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.caja-interes {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+.caja-interes>h4 {
+    margin-bottom: 10px;
+    color: rgba(8, 0, 119, 0.6);
+}
+
+.caja-interes>p {
+    text-align: center;
+}
+
+
+/*Horario*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1px;
+    background-color: rgba(8, 0, 119, 0.6);
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(8, 0, 119, 0.6);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+.item1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+/* Carrusel */
+
+.carousel-inner,
+.carousel-caption {
+    position: static;
+    z-index: 1;
+}
+
+
+/* Footer */
+
+footer {
+    background: rgba(74, 116, 206, 0.6);
+}
+
+footer .contenedor>p {
+    margin-top: 10px;
+}
+
+footer .contenedor>p>a {
+    color: rgb(0, 13, 129);
+}
+
+.redes {
+    margin-top: 50px;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 700px) {
+    .nav2 {
+        color: #fff;
+    }
+    .icono {
+        display: block;
+        cursor: pointer;
+    }
+    .textos>h1 {
+        font-size: 70px;
+    }
+    .textos>h2 {
+        font-size: 35px;
+    }
+    .enlaces {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        height: 100%;
+        transition: 1s;
+        width: 0;
+        overflow: hidden;
+    }
+    .curso {
+        height: auto;
+        width: auto;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+    .textos-work h4 {
+        line-height: 30px;
+        font-weight: 30px;
+        font-size: 15px;
+    }
+    .carrusel {
+        display: none;
+    }
+    /*Barra despliegue responsive*/
+    .enlaces a {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+        text-align: center;
+        background: rgba(170, 170, 170);
+        color: #fff;
+    }
+    .caja-interes {
+        width: 90%;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carrusel {
+        display: none;
+    }
+    .curso {
+        margin-left: 20px;
+    }
+    .caja-interes {
+        width: 90%;
+        margin-bottom: 60px;
+    }
+    .iconos {
+        margin: auto;
+    }
+    footer .contenedor>p {
+        font-size: 17px;
+    }
+}

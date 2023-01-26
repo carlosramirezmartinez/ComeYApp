@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario De Contacto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Mis estilos-->
+    <link rel="stylesheet" href="estilo.css">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="form">
+        <form action="guardar.php" method="POST">
+
+
+            <p>Nombre y apellidos</p>
+            <label for="nombre"></label>
+            <br>
+            <input type="text" name="nombre" placeholder="Nombre y Apellidos" required>
+
+            <p>Telefono de contacto</p>
+            <label for="telefono">Fijo o movil</label>
+            <br>
+            <input type="tel" name="telefono" pattern="[0-9]{9}" required>
+
+            <p>Correo</p>
+            <label for="correo">Direccion De Correo</label>
+            <br>
+            <input type="email" name="correo" placeholder="alguien@algo.com" value="ejemplo@gmail.com" required>
+
+
+
+            <br>
+            <br>
+            <br>
+            <label for="mensaje">Porque quiere estar en nuestro equipo:</label>
+            <br>
+            <textarea name="mensaje" value="Ninguna" required></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <br>
+            <br>
+            <input type="reset" value="Borrar todo">
+            <br>
+            <br>
+        </form>
+    </div>
+</body>
+
+</html>
